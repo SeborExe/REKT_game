@@ -6,7 +6,11 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
+    [SerializeField] float chaseRange = 5f;
+
     NavMeshAgent navMeshAgent;
+
+    float distanceToTarget = Mathf.Infinity;
 
     private void Start()
     {
@@ -15,6 +19,15 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        navMeshAgent.SetDestination(target.position);
+        distanceToTarget = Vector3.Distance(target.position, transform.position);
+
+        if (chaseRange >= distanceToTarget)
+            navMeshAgent.SetDestination(target.position);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 }
