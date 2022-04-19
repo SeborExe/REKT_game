@@ -560,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.6938019
+      value: -3.83
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1241,6 +1241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 198318665900117801, guid: 661d20f5f669749448fbf0563a203288, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 974894163}
     - target: {fileID: 3200408663697186697, guid: 661d20f5f669749448fbf0563a203288, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1289,17 +1293,9 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 974894163}
-    - target: {fileID: 3200408663697186738, guid: 661d20f5f669749448fbf0563a203288, type: 3}
-      propertyPath: chaseRange
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3200408663697186739, guid: 661d20f5f669749448fbf0563a203288, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3200408663697186741, guid: 661d20f5f669749448fbf0563a203288, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d20f5f669749448fbf0563a203288, type: 3}
