@@ -621,6 +621,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 2000000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   m_PrefabInstance: {fileID: 492826521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &492826525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+  m_PrefabInstance: {fileID: 492826521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &545012456
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +932,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
   m_PrefabInstance: {fileID: 492826521}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &974894164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492826525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee70fa0361720564d82aad36d05986fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 1923915180}
+--- !u!114 &974894165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492826525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e31b8d0ece6b224da1a7f5d40013dfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1083535861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1083535864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144998978}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: PlayAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1083535864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,7 +1354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1296965044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1144998978}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1296965044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2091,6 +2145,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 974894163}
+    - target: {fileID: 3200408663697186738, guid: 661d20f5f669749448fbf0563a203288, type: 3}
+      propertyPath: chaseRange
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3200408663697186739, guid: 661d20f5f669749448fbf0563a203288, type: 3}
       propertyPath: m_Name
       value: Enemy
