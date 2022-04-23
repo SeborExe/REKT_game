@@ -8,21 +8,38 @@ public class Weapon : MonoBehaviour
     [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 2f;
+    [SerializeField] float delayShoot = 0.5f;
     [SerializeField] ParticleSystem shootParticle;
     [SerializeField] GameObject hitSparksParticle;
+    Ammo ammoSlot;
+
+    bool canShoot = true;
+
+    private void Start()
+    {
+        ammoSlot = GetComponentInParent<Ammo>();
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canShoot)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    void Shoot()
+    IEnumerator Shoot()
     {
-        PlayShootParticles();
-        ProcessRaycast();
+        canShoot = false;
+        if (ammoSlot.GetCurrentAmmo() > 0)
+        {
+            PlayShootParticles();
+            ProcessRaycast();
+            ammoSlot.ReduceCurrentAmmo();
+        }
+
+        yield return new WaitForSeconds(delayShoot);
+        canShoot = true;
     }
 
     private void PlayShootParticles()
