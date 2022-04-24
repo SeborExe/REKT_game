@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a06f0cfd58f5f54798c4b879341c8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoSlots: []
 --- !u!1 &971924662136136383
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +477,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 971924662136070299}
     - target: {fileID: 7817323743516035960, guid: ed7bda0720833db44bfbc31d1094f447, type: 3}
+      propertyPath: ammoType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817323743516035960, guid: ed7bda0720833db44bfbc31d1094f447, type: 3}
       propertyPath: delayShoot
       value: 1.5
       objectReference: {fileID: 0}
@@ -566,6 +570,10 @@ PrefabInstance:
       propertyPath: FPCamera
       value: 
       objectReference: {fileID: 971924662136070299}
+    - target: {fileID: 7817323743516035960, guid: 957456481d9f4ff499dce701cb01c623, type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7817323743516035960, guid: 957456481d9f4ff499dce701cb01c623, type: 3}
       propertyPath: delayShoot
       value: 0.25
